@@ -3,13 +3,12 @@ body{
 	margin: 0;
 	padding: 0;
 	text-align: center;
-
 }
 a{
 	text-decoration: none;
 }
 *{
-	outline: 1px solid green;
+	/*outline: 1px solid blue;*/
 	padding: 0;
 	margin: 0;
 }
@@ -29,6 +28,10 @@ nav#menu{
 	float: right;
 	margin-right: 13%;
 }
+/*nav#menu:hover{
+	width: 500px;
+	height: 200px;
+}*/
 div#menu-line a{
 	font-size: 1.5em;
 	color: #4c4c4c;
@@ -38,15 +41,16 @@ div#menu-line a{
 }
 div#menu-line a:hover{
 	text-shadow: 1px 1px 2px black;
-	text-decoration: overline;
 }
 nav#menu a{
 	font-size: 0.75em;
 	color: #a7a7a7;
 	padding: 41.5px 0px;
+	border-bottom: 1px transparent;
+	transition: all 0.5s;
 }
 nav#menu a:hover{
-	text-shadow: 1px 1px 2px black;
+	text-shadow: 1px 1px 2px gray;
 }
 /*//////////////////////////////////////////*/
 div#main-bkg {
