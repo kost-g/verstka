@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>testsite</title>
+        <link rel="shortcut icon" href="images/button_down.png" type="image/png">
+        <link rel="stylesheet" href="reset.css">     
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> 
+        <script src="http://maps.googleapis.com/maps/api/js"></script> <!-- google map -->
+        <script src="map_script.js"></script>         
+    </head>    
+    <body>
+        <div id="menu-line">
+        <a href="index.html" id="logo">LOGO</a>
+        <nav id="menu">
+            <a href="#content-title">WORK</a>
+            <a href="#team-content">TEAM</a>
+            <a href="#contact">CONTACT</a>
+            <a class = "login" href="#">Login</a>
+            <a class = "sign-up" href="signup.html">Sign up</a>
+        </nav>
+        </div>
+        <div class="wrapper">
+            <h1>Sign up</h1>
+          <!--   <a href="" class = "btn btn-facebook">Sign up with Facebook</a> -->
+          <button class = "btn btn-facebook" formaction="#">Sign up with Facebook</button>
+            <strong class="line-thru">
+                <p class="or">or</p>
+            </strong>
+            <h2 class="sign_header">Sign up with your email address</h2>
+            <p><span class="error">* required field.</span></p
+            <div class = "registration">
+                <form action="signup.php" method="POST" class="regist" name="signup-form" id="signup-form">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <span class="error">* <?php echo $nameErr;?></span>
+                    <input type="password" name="password" placeholder="Password" >
+                    <span class="error">* <?php echo $nameErr;?></span>
+                    <input type="email" name="email" placeholder="Email" autocomplete="on" required>
+                    <span class="error">* <?php echo $nameErr;?></span>
+                    <input type="email" name="confirm_email" placeholder="Confirm email" autocomplete="on" required>
+                    <span class="error">* <?php echo $nameErr;?></span>
+                    <input type="text" name="website" placeholder="Your website" autocomplete="on" target="_blank">
+                    <span class="error"> &#160; <?php echo $nameErr;?></span>
+                    <label for="register-age">Date of birth:</label>
+                    <select name="register_month" id="month" >
+                        <option value="" selected="" disabled="">month</option>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>        
+                    <input type="number" id="register-dob-day" class="dob valid" name="dob_day" placeholder="day" pattern="[0-9]*" maxlength="2" min="1" max="31" required="" data-msg-required="When were you born?" data-msg-number="Please enter a valid day of the month." data-msg-min="Please enter a valid day of the month." data-msg-max="Please enter a valid day of the month.">
+                    <input type="number" id="register-dob-year" class="dob" name="dob_year" placeholder="year" pattern="[0-9]*" maxlength="4" min="1900" max="2003" required="" data-msg-required="When were you born?" data-msg-number="Please enter a valid year." data-msg-min="Please enter a valid year." data-msg-max="Sorry, but you don't meet Spotify's age requirements.">
+                    <input type="radio" id="gender" name="gender" value="female">Female
+                    <input type="radio" id="gender" name="gender" value="male">Male
+                    <button type="submit" form="signup-form" value="submit" id="sign-button">Sign up</button>
+               </form>   
+            </div>
+        </div>
+    </body>
+</html>

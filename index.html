@@ -14,14 +14,15 @@
     <body>
         <div id="menu-line">
             <a href="index.html" id="logo">LOGO</a>
-        <nav id="menu">
-            <a href="#content-title">WORK</a>
-            <a href="#team-content">TEAM</a>
-            <a href="#contact">CONTACT</a>
-        </nav>
+            <nav id="menu">
+                <a href="#content-title">WORK</a>
+                <a href="#team-content">TEAM</a>
+                <a href="#contact">CONTACT</a>
+                <a class = "login" href="#">Login</a>
+                <a class = "sign-up" href="signup.html">Sign up</a>
+            </nav>
         </div>
         <div id="main-bkg">
-            <!-- <img src="images/header_fon.png" alt="fon" width="1200" height="500"> -->
             <h1>let us make<br>your lives easier</h1>
             <p>We specialize in crafting awesome ideas for web, mobile and beyond.</p>
             <a href="#content-title">
@@ -107,12 +108,10 @@
                 <div id="message-title">
                     <p>Want to contact us now? Just drop us a line below.</p>
                 </div>
-                <form action="#message.php" method="POST" name="message" id="message-form">
+                <form action="message1.php" method="POST" name="message" id="message-form">
                     <textarea name="text-area" id="message-window" placeholder="Leave us a message...."></textarea>
-                    <input type="email" placeholder="your@mail.com">
-                    <a href="#">
-                        <img src="images/Send-button.png" alt="Send">
-                    </a>  
+                    <input type="email" placeholder="your@mail.com" name="email" autocomplete="on" required>
+                    <button type="submit" form="message-form" value="Submit"><img src="images/Send-button.png" alt="Send"></button>
                 </form>                   
             </div>
         </div>
